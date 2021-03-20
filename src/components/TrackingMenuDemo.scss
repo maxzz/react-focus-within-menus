@@ -1,0 +1,73 @@
+#fwin-menu-demo {
+    $menu-clr: white;
+    $menu-bkg: rgb(3, 124, 223);
+    $menu-sel: rgb(126, 181, 226);
+
+    ul {
+        list-style: none;
+        margin: 0;
+        padding-left: 0;
+    }
+
+    li {
+        display: block;
+        float: left;
+
+        position: relative;
+        padding: 1rem;
+        text-decoration: none;
+        background: $menu-bkg;
+        color: $menu-clr;
+        transition-duration: 0.5s;
+    }
+
+    li a {
+        text-decoration: none;
+        color: $menu-clr;
+    }
+
+    li:hover,
+    li:focus-within {
+        background: $menu-sel;
+        cursor: pointer;
+    }
+
+    li:focus-within a {
+        outline: none;
+    }
+
+    ul li ul {
+        visibility: hidden;
+        opacity: 0;
+        display: none;
+
+        position: absolute;
+        margin-top: 1rem;
+        left: 0;
+        min-width: 5rem;
+        transition: all 0.5s ease;
+    }
+
+    ul li:hover > ul,
+    ul li:focus-within > ul,
+    ul li ul:hover,
+    ul li ul:focus {
+        visibility: visible;
+        opacity: 1;
+        display: block;
+    }
+
+    ul li ul li {
+        clear: both;
+        width: 100%;
+    }
+}
+
+.clearfix:after {
+    visibility: hidden;
+    display: block;
+    font-size: 0;
+    content: " ";
+    clear: both;
+    height: 0;
+}
