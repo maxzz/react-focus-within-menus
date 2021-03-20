@@ -1,39 +1,34 @@
 #fwin-menu-demo {
-    a {
-        text-decoration: none;
-    }
+    $menu-clr: white;
+    $menu-bkg: darkorange;
+    $menu-sel: red;
 
-    nav {
-        font-family: monospace;
-    }
-}
-
-#fwin-menu-demo {
     ul {
-        //background: darkorange;
         list-style: none;
         margin: 0;
         padding-left: 0;
     }
 
     li {
-        color: #fff;
-        background: darkorange;
         display: block;
         float: left;
-        padding: 1rem;
+
         position: relative;
+        padding: 1rem;
         text-decoration: none;
+        background: $menu-bkg;
+        color:$menu-clr;
         transition-duration: 0.5s;
     }
 
     li a {
-        color: #fff;
+        text-decoration: none;
+        color: $menu-clr;
     }
 
     li:hover,
     li:focus-within {
-        background: red;
+        background: $menu-sel;
         cursor: pointer;
     }
 
@@ -42,15 +37,15 @@
     }
 
     ul li ul {
-        //background: orange;
         visibility: hidden;
         opacity: 0;
-        min-width: 5rem;
+        display: none;
+
         position: absolute;
-        transition: all 0.5s ease;
         margin-top: 1rem;
         left: 0;
-        display: none;
+        min-width: 5rem;
+        transition: all 0.5s ease;
     }
 
     ul li:hover > ul,
