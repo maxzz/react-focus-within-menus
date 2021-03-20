@@ -1,7 +1,10 @@
-import { defineConfig } from 'vite'
-import reactRefresh from '@vitejs/plugin-react-refresh'
+import { defineConfig, UserConfig } from "vite";
+import reactRefresh from "@vitejs/plugin-react-refresh";
 
-// https://vitejs.dev/config/
-export default defineConfig({
-  plugins: [reactRefresh()]
-})
+export default ({ command }: { command: string }) => {
+    let config = defineConfig({
+        base: command === 'build' ? '/react-focus-within-menus/' : '/',
+        plugins: [reactRefresh()],
+    }) as UserConfig;
+    return config;
+}

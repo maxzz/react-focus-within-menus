@@ -1,10 +1,14 @@
 {
   "name": "fluid-menu-links",
   "version": "0.0.0",
+  "license": "MIT",
+  "description": "Exploring UX of the menu interactions",
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
-    "serve": "vite preview"
+    "serve": "vite preview",
+    "predeploy": "yarn build",
+    "deploy": "gh-pages -d dist"
   },
   "dependencies": {
     "react": "^17.0.0",
