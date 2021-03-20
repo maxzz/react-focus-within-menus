@@ -17,7 +17,7 @@
         padding: 1rem;
         text-decoration: none;
         background: $menu-bkg;
-        color:$menu-clr;
+        color: $menu-clr;
         transition-duration: 0.5s;
     }
 
@@ -61,4 +61,13 @@
         clear: both;
         width: 100%;
     }
+}
+
+.clearfix:after {
+    visibility: hidden;
+    display: block;
+    font-size: 0;
+    content: " ";
+    clear: both;
+    height: 0;
 }
