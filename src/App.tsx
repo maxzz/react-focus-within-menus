@@ -1,10 +1,10 @@
 import React from "react";
 import "./App.css";
-import FocusWithinMenu from "./components/FocusWithinMenu";
+import FocusWithinMenuDemo from "./components/FocusWithinMenuDemo";
 
 function App() {
     return <div className="App">
-        <FocusWithinMenu></FocusWithinMenu>
+        <FocusWithinMenuDemo></FocusWithinMenuDemo>
     </div>;
 }
 

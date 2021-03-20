@@ -1,5 +1,5 @@
 import React from 'react';
-import './FocusWithinMenu.scss';
+import './FocusWithinMenuDemo.scss';
 
 interface FocusWithinMenuProps {
 
@@ -23,4 +23,16 @@ const FocusWithinMenu: React.FC<FocusWithinMenuProps> = () => {
     );
 };
 
-export default FocusWithinMenu;
+interface FocusWithinMenuDemoProps {
+    
+}
+
+const FocusWithinMenuDemo: React.FC<FocusWithinMenuDemoProps> = () => {
+    return (
+        <div id="fwin-menu-demo">
+            <FocusWithinMenu></FocusWithinMenu>
+        </div>
+    );
+};
+
+export default FocusWithinMenuDemo;
