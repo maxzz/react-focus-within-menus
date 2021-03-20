@@ -56,8 +56,8 @@ const FocusWithinMenuDemo: React.FC<FocusWithinMenuDemoProps> = () => {
                 >:focus-within demo</button>
             </h1>
 
-            {visible && <div className="mt-4 flex justify-between items-center bg-gradient-to-r from-green-400 to-blue-500">
-                <span className="pl-4">
+            {visible && <div className="h-[222px] mt-4 flex justify-between items-end bg-gradient-to-r from-green-400 to-blue-500">
+                <span className="pl-4 self-center">
 
                     {/* <svg className="w-12 h-12 text-blue-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path fill="currentColor" d="M12 14l9-5-9-5-9 5 9 5z" />
@@ -105,7 +105,7 @@ const FocusWithinMenuDemo: React.FC<FocusWithinMenuDemoProps> = () => {
 
                 </span>
 
-                <div id="fwin-menu-demo" className="clearfix pr-2">
+                <div id="fwin-menu-demo" className="clearfix pr-2 pb-4">
                     <FocusWithinMenu></FocusWithinMenu>
                 </div>
             </div>}

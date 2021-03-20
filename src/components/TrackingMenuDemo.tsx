@@ -8,7 +8,7 @@ interface TrackingMenuProps {
 const TrackingMenu: React.FC<TrackingMenuProps> = () => {
     return (
         <div>
-            <svg xmlns="http://www.w3.org/2000/svg" hidden>
+            <svg xmlns="http://www.w3.org/2000/svg" style={{display: 'none'}}>
                 <symbol id="arrow" viewBox="0 0 16 16" >
                     <polyline points="4 6, 8 10, 12 6" stroke="#000" strokeWidth="2" fill="transparent" strokeLinecap="round" />
                 </symbol>
