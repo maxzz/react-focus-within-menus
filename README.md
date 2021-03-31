@@ -2,6 +2,8 @@
 
 Study project: Exploring UX of the menu interactions.
 
+![](src/assets/preview-2021-03-30_19-51-52.png)
+
 ## Credits and References
 
 * [caniusu :focus-within](https://caniuse.com/#feat=css-focus-within)
