@@ -63,13 +63,13 @@ function ClickOutside() {
             {/* nav-content */}
             <div className={`${!isOpen ? 'hidden' : ''}`} aria-hidden={!isOpen} aria-labelledby='nav-toggle'>
                 <ul className="flex space-x-4">
-                    <li className="px-5 py-3 text-gray-700 hover:bg-yellow-300 uppercase text-gray-200">
+                    <li className="px-5 py-3 hover:bg-yellow-300 uppercase text-gray-200">
                         <a href='#'>A</a>
                     </li>
-                    <li className="px-5 py-3 text-gray-700 hover:bg-yellow-400 uppercase text-gray-200">
+                    <li className="px-5 py-3 hover:bg-yellow-400 uppercase text-gray-200">
                         <a href='#'>B</a>
                     </li>
-                    <li className="px-5 py-3 text-gray-700 hover:bg-yellow-400 uppercase text-gray-200">
+                    <li className="px-5 py-3 hover:bg-yellow-400 uppercase text-gray-200">
                         <a href='#'>C</a>
                     </li>
                 </ul>
