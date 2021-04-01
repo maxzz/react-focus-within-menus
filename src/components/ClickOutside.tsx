@@ -32,7 +32,12 @@ function ClickOutside() {
         >
             {/* nav-toggle */}
             <button
-                className="my-4 px-2 py-1 border rounded border-gray-300 bg-gray-500 uppercase tracking-wide bg-gradient-to-r from-blue-600 to-blue-400"
+                className={
+                    `my-4 px-3 py-2 border rounded border-green-300 bg-gray-500 uppercase tracking-wide 
+                    bg-gradient-to-r ${isOpen ? 'from-blue-600 to-blue-400' : 'from-blue-400 to-blue-600'}
+                    focus:outline-none
+                    `
+                }
                 type='button'
                 onClick={event => {
                     event.stopPropagation();
@@ -43,19 +48,19 @@ function ClickOutside() {
                 aria-expanded={isOpen}
                 aria-controls='nav-content'
             >
-                Extra controls
+                Extra actions
             </button>
             {/* nav-content */}
             <div className={`${!isOpen ? 'hidden' : ''}`} aria-hidden={!isOpen} aria-labelledby='nav-toggle'>
                 <ul className="flex space-x-4">
                     <li className="px-4 py-2 text-gray-700 hover:bg-yellow-300 uppercase">
-                        <a href='#'>Link 1</a>
+                        <a href='#'>A</a>
                     </li>
                     <li className="px-4 py-2 text-gray-700 hover:bg-yellow-400 uppercase">
-                        <a href='#'>Link 2</a>
+                        <a href='#'>B</a>
                     </li>
                     <li className="px-4 py-2 text-gray-700 hover:bg-yellow-400 uppercase">
-                        <a href='#'>Link 3</a>
+                        <a href='#'>C</a>
                     </li>
                 </ul>
             </div>
