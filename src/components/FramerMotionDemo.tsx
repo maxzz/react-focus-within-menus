@@ -1,6 +1,5 @@
 import React, { useReducer } from 'react';
 import { motion, MotionConfig } from 'framer-motion';
-import './FramerMotionDemo.scss';
 
 // Dummy items
 
@@ -80,7 +79,7 @@ const FramerMotion = () => {
 };
 
 const FramerMotionDemo = () => {
-    const [visible, setVisible] = React.useState(true);
+    const [visible, setVisible] = React.useState(false);
 
     return (
         <div className="pt-4">
