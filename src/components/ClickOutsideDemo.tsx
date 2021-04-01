@@ -88,7 +88,7 @@ function ClickOutsideDemo() {
                     className="ml-4 px-4 py-3 font-bold text-gray-100 bg-gray-500 hover:bg-gray-600 focus:outline-none border border-gray-100 rounded-md"
                     onClick={() => setVisible(!visible)}
                 >
-                    Click outside
+                    Click outside demo
                 </button>
             </h1>
 
