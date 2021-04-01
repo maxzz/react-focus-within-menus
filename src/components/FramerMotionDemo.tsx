@@ -32,17 +32,20 @@ function useDummyItems() {
 
 //
 
-function Switch({ isActive, onClick }: any) {
+function Switch({ isActive, onClick }: { isActive: boolean, onClick: () => void }) {
     return (
         <MotionConfig transition={{ duration: 0.3, ease: "easeOut" }}>
             <motion.div
-                className="switch"
+                className="w-14 h-8 rounded-3xl border border-blue-600 shadow-inner p-1 cursor-pointer flex items-center"
                 initial={false}
-                animate={{ backgroundColor: isActive ? "#f90566" : "#111" }}
+                animate={{ backgroundColor: isActive ? "#32b48a" : "#0f51ba" }}
                 onClick={onClick}
                 style={{ justifyContent: isActive ? "flex-end" : "flex-start" }}
             >
-                <motion.div layout className="handle" />
+                <motion.div
+                    layout
+                    className="bg-gray-100 border border-gray-500 rounded-full w-6 h-6"
+                />
             </motion.div>
         </MotionConfig>
     );
@@ -58,10 +61,11 @@ const FramerMotion = () => {
     };
 
     return (
-        <div className="container">
-            <ul>
+        <div className="mt-4">
+            <ul className="p-4 space-y-2 bg-gradient-to-r from-green-400 to-blue-500">
                 {Object.keys(items).sort(compareActive).map((id) => (
                     <motion.li
+                        className="px-2 py-2 w-48 rounded-md flex items-center justify-between bg-blue-600 text-gray-300"
                         layout
                         transition={{ delay: 0.5, type: "spring", duration: 0.5, bounce: 0.2 }}
                         key={id}

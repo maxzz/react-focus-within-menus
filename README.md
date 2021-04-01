@@ -2,7 +2,7 @@
 
 Study project: Exploring UX of the menu interactions.
 
-![](src/assets/preview-2021-03-30_19-51-52.png)
+![](src/assets/preview-2021-04-01_4-35-18.png)
 
 ## Credits and References
 
