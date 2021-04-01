@@ -79,7 +79,7 @@ function ClickOutside() {
 }
 
 function ClickOutsideDemo() {
-    const [visible, setVisible] = React.useState(true);
+    const [visible, setVisible] = React.useState(false);
 
     return (
         <div className="pt-4">
