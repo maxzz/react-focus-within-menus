@@ -33,7 +33,7 @@ function ClickOutside() {
             {/* nav-toggle */}
             <button
                 className={
-                    `my-4 px-3 py-2 border rounded border-green-300 bg-gray-500 uppercase tracking-wide 
+                    `my-4 px-3 py-2 border rounded border-green-300 bg-gray-500 uppercase tracking-wide
                     bg-gradient-to-r ${isOpen ? 'from-blue-600 to-blue-400' : 'from-blue-400 to-blue-600'}
                     focus:outline-none
                     `
@@ -49,6 +49,16 @@ function ClickOutside() {
                 aria-controls='nav-content'
             >
                 Extra actions
+                <div className="">
+                    {!isOpen ?
+                    (<svg fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M11 19l-7-7 7-7m8 14l-7-7 7-7" />
+                    </svg>) :
+                    (<svg fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 5l7 7-7 7M5 5l7 7-7 7" />
+                    </svg>)
+                    }
+                </div>
             </button>
             {/* nav-content */}
             <div className={`${!isOpen ? 'hidden' : ''}`} aria-hidden={!isOpen} aria-labelledby='nav-toggle'>
@@ -74,9 +84,12 @@ function ClickOutsideDemo() {
     return (
         <div className="pt-4">
             <h1>
-                <button className="ml-4 px-4 py-3 font-bold text-gray-100 bg-gray-500 hover:bg-gray-600 focus:outline-none border border-gray-100 rounded-md"
+                <button
+                    className="ml-4 px-4 py-3 font-bold text-gray-100 bg-gray-500 hover:bg-gray-600 focus:outline-none border border-gray-100 rounded-md"
                     onClick={() => setVisible(!visible)}
-                >Click outside</button>
+                >
+                    Click outside
+                </button>
             </h1>
 
             {visible && <ClickOutside />}
