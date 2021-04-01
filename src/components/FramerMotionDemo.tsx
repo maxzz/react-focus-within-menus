@@ -1,5 +1,6 @@
 import React, { useReducer } from 'react';
 import { motion, MotionConfig } from 'framer-motion';
+import './FramerMotionDemo.scss';
 
 // Dummy items
 
@@ -16,7 +17,7 @@ function itemsReducer(state: State, { action, id }: { action: typeof TOGGLE, id:
     return state;
 }
 
-function useDummyItems(): [State, (id: string) => () => void] {
+function useDummyItems() {
     const [state, dispatch] = useReducer(itemsReducer, {
         "Item 1": false,
         "Item 2": false,
@@ -26,7 +27,7 @@ function useDummyItems(): [State, (id: string) => () => void] {
     return [
         state,
         (id: string) => () => dispatch({ action: TOGGLE, id })
-    ];
+    ] as const;
 }
 
 //
